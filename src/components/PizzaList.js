@@ -1,8 +1,8 @@
 import React from "react";
 import Pizza from "./Pizza";
 
-function PizzaList({pizzas}) {
-  const renderPizza = pizzas.map(pizza => <Pizza key={pizza.id} pizza={pizza}/>)
+function PizzaList({ pizzas, sendInfoToForm }) {
+  const renderPizza = pizzas.map(pizza => <Pizza key={pizza.id} pizza={pizza} sendInfoToForm={sendInfoToForm}/>)
 
   return (
     <table className="table table-striped">
